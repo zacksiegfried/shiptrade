@@ -1,0 +1,64 @@
+open_trade_route_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+	desc = open_trade_route_decision_desc
+
+	is_shown = {
+
+		# AI Blocker
+		is_ai = no
+
+		# ADD	is only shown for players of certain cultural heritage 
+		# Central Germanic, Frankish, Iberian, West Germanic (North Germanic?)
+
+		OR = {
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_west_germanic }
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_iberian }
+			#culture = { has_cultural_pillar = heritage_north_germanic }
+
+		}
+		
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:open_trade_route_decision
+			}
+		}
+	}
+
+	is_valid = {
+
+		# ADD	is only if avaliable if player controls complete empire
+		# Britannia, Francia, HRE, Hispania, the North Sea
+
+		OR = {
+			has_title = title:e_britannia
+			has_title = title:e_france
+			has_title = title:e_germany
+			has_title = title:e_hre
+			has_title = title:e_spain
+			has_title = title:e_north_sea
+		}
+
+		# ADD	is only if avaliable if players culture has discovered relevant cultural facination (use as blocker until late middle ages?)
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:open_trade_route_decision
+		}
+
+		trigger_event = open_trade_route.0001
+		# Send event to other players
+	}
+	
+}
