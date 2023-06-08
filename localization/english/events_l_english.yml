@@ -1,0 +1,5 @@
+﻿1_english:
+ shiptrade_decisions.0001.t:0 "Naval Trade Route Started"
+ shiptrade_decisions.0001.desc:0 "In search of new luxury goods, your Empire has sent out a naval fleet hoping to find far away lands to establish a trade route with"
+ shiptrade_decisions.0001.a:0 "We seek new laborers to bolster the workforce of the Empire"
+ shiptrade_decisions.0001.b:0 "We seek new spices to improve the food of the Empire"
