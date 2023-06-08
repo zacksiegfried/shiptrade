@@ -1,2 +1,5 @@
 
+.DS_Store
+
+# ignoring files copied from main game repo that are only used as reference code
 ref*
