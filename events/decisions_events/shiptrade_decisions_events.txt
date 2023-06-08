@@ -1,0 +1,24 @@
+﻿namespace = shiptrade_decisions
+
+
+shiptrade_decisions.0001 = {
+	type = character_event
+	title = shiptrade_decisions.0001.t
+	desc = shiptrade_decisions.0001.desc
+	theme = stewardship
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	# West African Coast
+	option = {
+		name = shiptrade_decisions.0001.a
+	}
+
+	# Indian Peninsula
+	option = {
+		name = shiptrade_decisions.0001.b
+	}
+}
