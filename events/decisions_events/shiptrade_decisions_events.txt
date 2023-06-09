@@ -21,4 +21,9 @@ shiptrade_decisions.0001 = {
 	option = {
 		name = shiptrade_decisions.0001.b
 	}
+
+	# Revert option
+	option = {
+		name = shiptrade_decisions.0001.c
+	}
 }
